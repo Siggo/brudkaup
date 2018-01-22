@@ -1,0 +1,29 @@
+React síða - nota routing fyrir undirsíður
+
+Um okkur
+
+Áætlun - kort af kirkju/sal, staðsetningar, hvenær og hvar
+	Google maps virkni
+
+Flug og gisting fyrir útlendinga
+
+RSVP virkni
+	Logging - RSVP má ekki klikka, logga allt og hafa aðgengileg
+	Nota bara google docs og embedda?
+
+Song requests - Hvaða lag myndi fá þig til að dansa?
+	Spotify - post API er til - hvernig væri fetch-ið?
+	Leitargluggi til að sækja niðurstöður
+	Gluggi til að birta niðurstöður
+
+Íslenska/enska
+	Resource fælar? 
+
+
+
+
+Stage 1 - Grunnframework með cypress prófum
+Stage 2 - Navigation virkni - routing - virkni
+Stage 3 - Content - textar á ísl/ensku
+Stage 4 - Útlit
+Stage 5 - Auka sjitt
