@@ -1,24 +1,27 @@
 import { bindActionCreators } from 'redux'
+import React from 'react';
 import { connect } from 'react-redux'
-import React from 'react'
+import {  Route } from 'react-router-dom'
 
 import actions from '../redux/actions/'
 
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../styles/main.css'
 
 
-const MainLayout = ({container, ...props}) => {
+const MainLayout = ({component: Component, ...rest}) => {
   return (
-    <div>
-      { container ? (
-        <div className='container lay-mt--ms'>
-          {props.children}
+    <Route {...rest} render={matchProps => (
+      <div>
+        <div className="header">Header</div>
+        <div className="container">
+          <Component {...matchProps} />
         </div>
-        ) : props.children
-      }
-    </div>
+        <div className="footer">Footer</div>
+      </div>
+    )} />
   )
-}
+};
 
 function mapStateToProps (state) {
   return state

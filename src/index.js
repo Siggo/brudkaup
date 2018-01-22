@@ -3,7 +3,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import {  Route, BrowserRouter } from 'react-router-dom'
+import {  BrowserRouter } from 'react-router-dom'
 
 
 import configureStore from './redux/store'
@@ -22,12 +22,10 @@ function routeUpdate () {
   window.scrollTo(0, 0)
 }
 
-const MainLayoutContainer = (props) => <MainLayout container>{props.children}</MainLayout>
-
 render(
   <Provider store={store}>
-      <BrowserRouter onUpdate={routeUpdate.bind(this)} component={MainLayoutContainer}>
-          <Route path='/' component={Main}  />
+      <BrowserRouter onUpdate={routeUpdate.bind(this)}>
+     	<MainLayout path="/" component={Main} />
       </BrowserRouter>
   </Provider>,
   document.getElementById('root')
