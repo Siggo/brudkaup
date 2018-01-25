@@ -16,6 +16,8 @@ import Main from './pages/main'
 
 import actions from './redux/actions/'
 
+import './styles/main.css'
+
 const store = configureStore()
 
 function routeUpdate () {

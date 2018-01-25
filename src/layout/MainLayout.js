@@ -5,10 +5,6 @@ import {  Route } from 'react-router-dom'
 
 import actions from '../redux/actions/'
 
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import '../styles/main.css'
-
-
 const MainLayout = ({component: Component, ...rest}) => {
   return (
     <Route {...rest} render={matchProps => (
