@@ -21,13 +21,14 @@
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-css": "node-sass-chokidar src/styles/main.scss src/styles/main.css",
-    "watch-css": "npm run build-css && node-sass-chokidar src/styles/main.scss src/styles/main.css --watch --recursive"
+    "build-css": "node-sass-chokidar src/styles/main.scss src/styles/dist/main.css",
+    "watch-css": "npm run build-css && node-sass-chokidar src/styles/main.scss src/styles/dist/main.css --watch --recursive"
   },
   "devDependencies": {
     "cypress": "^1.4.1",
     "node-less-chokidar": "^0.1.2",
     "react-redux": "^5.0.6",
-    "react-router": "^4.2.0"
+    "react-router": "^4.2.0",
+    "standard": "^10.0.3"
   }
 }
