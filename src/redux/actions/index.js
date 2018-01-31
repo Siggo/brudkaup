@@ -1,6 +1,7 @@
-/*import {vehicleInfoActions} from './vehicleInfoActions'*/
+import { miscActions } from './miscActions'
 
 let actions = {
+  misc: miscActions
 }
 
 export default actions

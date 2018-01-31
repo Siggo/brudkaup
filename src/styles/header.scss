@@ -1,6 +1,6 @@
 .header
 {
-	position:absolute;
+	position:fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -16,7 +16,7 @@
 	  		list-style-type: none;
 	  		margin: 0;
 	  		a{
-		  		color: #FFF;
+		  		color: #ffffff;
 		  		font-weight: bold;
 		  		text-decoration: none;
 		  		padding: 20px;
