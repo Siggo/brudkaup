@@ -11,6 +11,7 @@ import { Provider } from 'react-redux'
 import Main from './pages/main'
 import About from './pages/about'
 import Stuff from './pages/stuff'
+import Venue from './pages/venue'
 
 import Container from './layouts/container'
 import banner from './images/Banner.jpg'
@@ -27,7 +28,7 @@ const state = store.getState()
 
 const scrollTo = (id) => {
   $('html, body').animate({
-    scrollTop: $(id).offset().top
+    scrollTop: $(id).offset().top - $('.header').height()
   }, 500)
 }
 
@@ -71,6 +72,7 @@ render(
           <li><a href='#main' onClick={() => scrollTo('#main')}>Main</a></li>
           <li><a href='#stuff' onClick={() => scrollTo('#stuff')}>Stuff</a></li>
           <li><a href='#about' onClick={() => scrollTo('#about')}>About</a></li>
+          <li><a href='#venue' onClick={() => scrollTo('#venue')}>Venue</a></li>
         </ul>
       </div>
       <div className='banner'>
@@ -81,6 +83,7 @@ render(
           <Container id='main' component={Main} />
           <Container id='stuff' component={Stuff} />
           <Container id='about' component={About} />
+          <Container id='venue' component={Venue} />
         </div>
       </div>
     </div>
