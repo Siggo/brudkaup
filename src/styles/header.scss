@@ -5,8 +5,13 @@
 	top: 0;
 	width: 100%;
 	text-align: center;
-	background-color: $banner-color;
-
+	background-color: $banner-color-light;
+	transition: background-color .2s;
+	&.scrolled
+	{
+		background-color: $banner-color;
+		transition: background-color .2s;
+	}
 	&--nav {
 		padding: 0;
 		margin: 0;

@@ -2,5 +2,13 @@
 {
 	width: 100%;
 	text-align: center;
+	height: 500px;
 	margin-top: 64px;
+	&--image
+	{
+		background-image: url('../../images/Banner.jpg');
+		background-size: cover;
+		background-position: bottom;
+		height: 100%;
+	}
 }

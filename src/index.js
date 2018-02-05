@@ -14,7 +14,6 @@ import Stuff from './pages/stuff'
 import Venue from './pages/venue'
 
 import Container from './layouts/container'
-import banner from './images/Banner.jpg'
 
 import actions from './redux/actions/'
 
@@ -31,6 +30,10 @@ const scrollTo = (id) => {
     scrollTop: $(id).offset().top - $('.header').height()
   }, 500)
 }
+
+window.addEventListener('scroll', function () {
+  $('.header').toggleClass('scrolled', window.scrollY > $('.header').height())
+})
 
 flipp(() => {
   store.dispatch(actions.misc.flipView())
@@ -76,7 +79,7 @@ render(
         </ul>
       </div>
       <div className='banner'>
-        <img src={banner} alt='banner' />
+        <div className='banner--image' />
       </div>
       <div className='container'>
         <div className='row'>
