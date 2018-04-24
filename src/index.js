@@ -12,6 +12,7 @@ import Main from './pages/main'
 import About from './pages/about'
 import Stuff from './pages/stuff'
 import Venue from './pages/venue'
+import RSVP from './pages/rsvp'
 
 import Container from './layouts/container'
 
@@ -75,6 +76,7 @@ render(
           <li><a href='#main' onClick={() => scrollTo('#main')}>Main</a></li>
           <li><a href='#stuff' onClick={() => scrollTo('#stuff')}>Stuff</a></li>
           <li><a href='#about' onClick={() => scrollTo('#about')}>About</a></li>
+          <li><a href='#rsvp' onClick={() => scrollTo('#rsvp')}>RSVP</a></li>
           <li><a href='#venue' onClick={() => scrollTo('#venue')}>Venue</a></li>
         </ul>
       </div>
@@ -86,6 +88,7 @@ render(
           <Container id='main' component={Main} />
           <Container id='stuff' component={Stuff} />
           <Container id='about' component={About} />
+          <Container id='rsvp' component={RSVP} />
           <Container id='venue' component={Venue} />
         </div>
       </div>

@@ -28,4 +28,6 @@ npm run start
 
 ## Deployment
 
-To do
+```
+npm run deploy
+```
