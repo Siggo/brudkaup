@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://siggo.github.io/Brudkaup/",
+  "baseurl": "/Brudkaup",
   "dependencies": {
     "express": "^4.16.2",
     "jquery": "^3.3.1",
