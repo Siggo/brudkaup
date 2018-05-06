@@ -17,6 +17,7 @@
 .env.test.local
 .env.production.local
 /src/styles/main.css
+/src/styles/dist/main.css
 /build
 /build/*
 Pælingar.txt
