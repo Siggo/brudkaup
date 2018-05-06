@@ -6027,16 +6027,14 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #ddd !important; } }
 
 .header {
-  position: fixed;
-  left: 0;
-  top: 0;
   width: 100%;
   text-align: center;
-  background-color: rgba(35, 37, 105, 0.3);
-  transition: background-color .2s; }
+  background-color: white;
+  position: relative; }
   .header.scrolled {
-    background-color: #232569;
-    transition: background-color .2s; }
+    position: fixed;
+    top: 0;
+    left: 0; }
   .header--nav {
     padding: 0;
     margin: 0; }
@@ -6045,13 +6043,13 @@ a.text-dark:hover, a.text-dark:focus {
       list-style-type: none;
       margin: 0; }
       .header--nav li a {
-        color: #ffffff;
+        color: black;
         font-weight: bold;
         text-decoration: none;
         padding: 20px;
         display: inline-block; }
         .header--nav li a.active {
-          background: #030309; }
+          background: #3f3515; }
 
 .footer {
   position: absolute;
@@ -6063,31 +6061,32 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: center; }
 
 body {
-  background: linear-gradient(-45deg, #2a85d4, #d6ab10, #ffd700, #4858cc);
+  background: #E7BD99;
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite; }
 
 .banner {
+  position: fixed;
+  top: 0;
   width: 100%;
-  text-align: center;
-  height: 500px;
-  margin-top: 64px; }
-  .banner--image {
-    background-image: url("../../images/Banner.jpg");
-    background-size: cover;
-    background-position: bottom;
-    height: 100%; }
+  z-index: -5;
+  padding-bottom: 870px;
+  background-repeat: no-repeat;
+  background-image: url("../../images/Header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+  .banner.scrolled {
+    position: absolute; }
 
 .subpage {
   width: 100%;
-  min-height: 500px;
+  min-height: 50vh;
+  width: 100%;
   background-color: #f5f5f5;
-  padding: 40px;
-  margin-top: 40px; }
-  .subpage:last-child {
-    margin-bottom: 40px; }
+  padding: 40px; }
   .subpage--wrap {
     display: flex;
     justify-content: space-between; }
@@ -6098,3 +6097,36 @@ body {
       margin-right: 10px; }
     .subpage--wrap .about--him {
       margin-left: 10px; }
+
+#main {
+  background-color: #12436C;
+  color: white; }
+
+#about {
+  background-color: #9F8435;
+  color: white; }
+
+#rsvp {
+  background-color: #3D5571;
+  color: white; }
+
+#stuff {
+  background-color: #B6A589;
+  color: white; }
+
+#venue {
+  background-color: #12436C;
+  color: white; }
+
+#rsvp-form p {
+  width: 100%;
+  margin-bottom: 5px; }
+
+#rsvp-form label {
+  margin-right: 20px; }
+
+#rsvp-form textarea {
+  width: 350px; }
+
+#rsvp-form button {
+  margin-top: 15px; }

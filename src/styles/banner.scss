@@ -1,14 +1,17 @@
 .banner
 {
-	width: 100%;
-	text-align: center;
-	height: 500px;
-	margin-top: 64px;
-	&--image
+	position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -5;
+    padding-bottom: 870px;
+    background-repeat: no-repeat;
+	background-image: url('../../images/Header.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	&.scrolled
 	{
-		background-image: url('../../images/Banner.jpg');
-		background-size: cover;
-		background-position: bottom;
-		height: 100%;
+		position: absolute;
 	}
 }

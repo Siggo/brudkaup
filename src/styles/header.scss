@@ -1,16 +1,14 @@
 .header
 {
-	position:fixed;
-	left: 0;
-	top: 0;
 	width: 100%;
 	text-align: center;
-	background-color: $banner-color-light;
-	transition: background-color .2s;
+	background-color: white;
+	position: relative;
 	&.scrolled
 	{
-		background-color: $banner-color;
-		transition: background-color .2s;
+		position:fixed;
+		top: 0;
+		left: 0;
 	}
 	&--nav {
 		padding: 0;
@@ -21,7 +19,7 @@
 	  		list-style-type: none;
 	  		margin: 0;
 	  		a{
-		  		color: #ffffff;
+		  		color: black;
 		  		font-weight: bold;
 		  		text-decoration: none;
 		  		padding: 20px;

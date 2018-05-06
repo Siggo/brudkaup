@@ -33,7 +33,20 @@ const scrollTo = (id) => {
 }
 
 window.addEventListener('scroll', function () {
-  $('.header').toggleClass('scrolled', window.scrollY > $('.header').height())
+  console.log(window.scrollY)
+  if (window.scrollY > $('.banner').outerHeight())
+  {
+    $('.header').addClass('scrolled').css({marginTop: 0});
+      $('.row').css({marginTop: ($('.header').outerHeight() + $('.banner').outerHeight())});
+    } 
+  else {
+      $('.header').removeClass('scrolled').css({marginTop: $('.banner').outerHeight()});;
+      $('.row').css({marginTop: 0});
+    }
+})
+
+window.addEventListener('resize', function () {
+  $('.header').css({marginTop: $('.banner').outerHeight()});
 })
 
 flipp(() => {
@@ -71,29 +84,30 @@ render(
 render(
   <Provider store={store}>
     <div>
-      <div className='header'>
-        <ul className='header--nav'>
-          <li><a href='#main' onClick={() => scrollTo('#main')}>Main</a></li>
-          <li><a href='#stuff' onClick={() => scrollTo('#stuff')}>Stuff</a></li>
-          <li><a href='#about' onClick={() => scrollTo('#about')}>About</a></li>
-          <li><a href='#rsvp' onClick={() => scrollTo('#rsvp')}>RSVP</a></li>
-          <li><a href='#venue' onClick={() => scrollTo('#venue')}>Venue</a></li>
-        </ul>
-      </div>
+      
       <div className='banner'>
         <div className='banner--image' />
       </div>
-      <div className='container'>
+      <div className='header'>
+        <ul className='header--nav'>
+          <li><a href='#main' onClick={() => scrollTo('#main')}>AÐAL</a></li>
+          <li><a href='#stuff' onClick={() => scrollTo('#stuff')}>STÖFF</a></li>
+          <li><a href='#about' onClick={() => scrollTo('#about')}>UM OKKUR</a></li>
+          <li><a href='#rsvp' onClick={() => scrollTo('#rsvp')}>RSVP</a></li>
+          <li><a href='#venue' onClick={() => scrollTo('#venue')}>STAÐSETNING</a></li>
+        </ul>
+      </div>
         <div className='row'>
-          <Container id='main' component={Main} />
-          <Container id='stuff' component={Stuff} />
-          <Container id='about' component={About} />
-          <Container id='rsvp' component={RSVP} />
+          <Container id='main'  component={Main} />
+          <Container id='stuff'  component={Stuff} />
+          <Container id='about'  component={About} />
+          <Container id='rsvp'  component={RSVP} />
           <Container id='venue' component={Venue} />
         </div>
-      </div>
     </div>
   </Provider>,
   document.getElementById('root')
 
 )
+
+$('.header').css({marginTop: $('.banner').outerHeight()});

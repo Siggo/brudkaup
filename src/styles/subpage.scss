@@ -1,14 +1,11 @@
 .subpage
 {
 	width: 100%;
-	min-height: 500px;
+	min-height: 50vh;;
+    width: 100%;
+
 	background-color: #f5f5f5;
     padding: 40px;
-    margin-top: 40px;
-    &:last-child
-    {
-    		margin-bottom: 40px;
-    }
     &--wrap
     {
     	display: flex;
@@ -33,4 +30,34 @@
 
     	}
     }
+}
+
+#main
+{
+    background-color: #12436C;
+    color: white;
+}
+
+#about
+{
+    background-color: #9F8435;
+    color: white;
+}
+
+#rsvp
+{
+    background-color: #3D5571;
+    color: white;
+}
+
+#stuff
+{
+    background-color: #B6A589;
+    color: white;
+}
+
+#venue
+{
+    background-color: #12436C;
+    color: white;
 }
