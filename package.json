@@ -19,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -b gh-pages -d build",
     "cypress:open": "cypress open",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
