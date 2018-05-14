@@ -1,8 +1,24 @@
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/AvenirLTStd-Book.otf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+    font-family: 'Avenir';
+  	font-style: normal;
+  	font-weight: 700;
+  	src: url('../../fonts/AvenirLTStd-Medium.otf'); /* IE9 Compat Modes */
+}
+
+
 body {
+	font-family: 'Avenir';
 	background: #E7BD99;
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
 }
-

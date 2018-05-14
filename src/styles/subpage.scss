@@ -11,24 +11,7 @@
     	display: flex;
     	justify-content: space-between;
 
-    	.about
-    	{
-    		&--him, &--her
-    		{
-    			flex-basis: 0;
-    			flex-grow: 1;
-
-    		}
-    		&--her
-    		{
-    			margin-right: 10px;
-    		}
-    		&--him
-    		{
-    			margin-left: 10px;
-    		}
-
-    	}
+    	
     }
 }
 
@@ -42,6 +25,24 @@
 {
     background-color: #9F8435;
     color: white;
+    .about
+        {
+            &--him, &--her
+            {
+                flex-basis: 0;
+                flex-grow: 1;
+
+            }
+            &--her
+            {
+                margin-right: 10px;
+            }
+            &--him
+            {
+                margin-left: 10px;
+            }
+
+        }
 }
 
 #rsvp
@@ -53,11 +54,5 @@
 #stuff
 {
     background-color: #B6A589;
-    color: white;
-}
-
-#venue
-{
-    background-color: #12436C;
     color: white;
 }

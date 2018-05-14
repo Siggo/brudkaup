@@ -10,7 +10,6 @@ import { Provider } from 'react-redux'
 
 import Main from './pages/main'
 import About from './pages/about'
-import Stuff from './pages/stuff'
 import Venue from './pages/venue'
 import RSVP from './pages/rsvp'
 
@@ -37,11 +36,11 @@ window.addEventListener('scroll', function () {
   if (window.scrollY > $('.banner').outerHeight())
   {
     $('.header').addClass('scrolled').css({marginTop: 0});
-      $('.row').css({marginTop: ($('.header').outerHeight() + $('.banner').outerHeight())});
+      $('.container-wrapper').css({marginTop: ($('.header').outerHeight() + $('.banner').outerHeight())});
     } 
   else {
       $('.header').removeClass('scrolled').css({marginTop: $('.banner').outerHeight()});;
-      $('.row').css({marginTop: 0});
+      $('.container-wrapper').css({marginTop: 0});
     }
 })
 
@@ -91,15 +90,13 @@ render(
       <div className='header'>
         <ul className='header--nav'>
           <li><a href='#main' onClick={() => scrollTo('#main')}>AÐAL</a></li>
-          <li><a href='#stuff' onClick={() => scrollTo('#stuff')}>STÖFF</a></li>
           <li><a href='#about' onClick={() => scrollTo('#about')}>UM OKKUR</a></li>
           <li><a href='#rsvp' onClick={() => scrollTo('#rsvp')}>RSVP</a></li>
           <li><a href='#venue' onClick={() => scrollTo('#venue')}>STAÐSETNING</a></li>
         </ul>
       </div>
-        <div className='row'>
+        <div className='container-wrapper'>
           <Container id='main'  component={Main} />
-          <Container id='stuff'  component={Stuff} />
           <Container id='about'  component={About} />
           <Container id='rsvp'  component={RSVP} />
           <Container id='venue' component={Venue} />
