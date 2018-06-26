@@ -32,7 +32,6 @@ const scrollTo = (id) => {
 }
 
 window.addEventListener('scroll', function () {
-  console.log(window.scrollY)
   if (window.scrollY > $('.banner').outerHeight())
   {
     $('.header').addClass('scrolled').css({marginTop: 0});
@@ -90,14 +89,12 @@ render(
       <div className='header'>
         <ul className='header--nav'>
           <li><a href='#main' onClick={() => scrollTo('#main')}>AÐAL</a></li>
-          <li><a href='#about' onClick={() => scrollTo('#about')}>UM OKKUR</a></li>
           <li><a href='#rsvp' onClick={() => scrollTo('#rsvp')}>RSVP</a></li>
           <li><a href='#venue' onClick={() => scrollTo('#venue')}>STAÐSETNING</a></li>
         </ul>
       </div>
         <div className='container-wrapper'>
           <Container id='main'  component={Main} />
-          <Container id='about'  component={About} />
           <Container id='rsvp'  component={RSVP} />
           <Container id='venue' component={Venue} />
         </div>
