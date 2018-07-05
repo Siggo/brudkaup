@@ -44,8 +44,8 @@ class RSVP extends Component {
         { !this.state.registered && 
           <form className="rsvp-form" target="_self" onSubmit={this.postToGoogle.bind(this)}>
             
-              <p>Það mikilvægasta! Ef þú ert hérna inni getum við ekki ímyndað okkur gott brúðkaup án þín. Smelltu inn svari að neðan hvort þú komist og nöfnin á þeim sem að mæta.</p>
-              <p>Við minnum góðlátlega á að það verður veisla fram á kvöld þannig að yngra fólkið (undir 18) þarf að vera heima.</p>
+              <p>Það mikilvæga! Ef þú ert hérna inni getum við ekki ímyndað okkur gott brúðkaup án þín. Smelltu inn svari að neðan hvort þú komist og nöfnin á þeim sem að mæta.</p>
+              <p>Við minnum góðlátlega á að það verður veisla fram á kvöld þannig að yngra fólkið (undir 16) þarf að vera heima.</p>
               <fieldset>
               <input id="qs1_op_1" type="radio" value="Já, ég mæti!" name="rsvp" />
               <label for="qs1_op_1">Já, ég mæti!</label>
