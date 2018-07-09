@@ -48,10 +48,14 @@ class RSVP extends Component {
               <p>Við minnum góðlátlega á að það verður veisla fram á kvöld þannig að yngra fólkið (undir 16) þarf að vera heima.</p>
               <p>Þegar að gítarstrengirnir verða allir slitnaðir mun DJ Spotify taka við. Ef þú situr á heitasta lagi sumarsins þá máttu endilega óska eftir því og við bætum því inn á playlistann!</p>
               <fieldset>
-              <input id="qs1_op_1" type="radio" value="Já, ég mæti!" name="rsvp" />
-              <label for="qs1_op_1">Já, ég mæti!</label>
-              <input id="qs1_op_2" type="radio" value="Því miður kemst ég ekki" name="rsvp" />
-              <label for="qs1_op_1">Kemst því miður ekki</label>
+              <div className='radio-group'>
+                <input id="qs1_op_1" type="radio" value="Já, ég mæti!" name="rsvp" />
+                <label for="qs1_op_1">Já, ég mæti!</label>
+              </div>
+              <div className='radio-group'>
+                <input id="qs1_op_2" type="radio" value="Því miður kemst ég ekki" name="rsvp" />
+                <label for="qs1_op_1">Kemst því miður ekki</label>
+              </div>
             </fieldset>
             <div className='rsvp-form__text'>
               <fieldset>

@@ -6118,17 +6118,28 @@ body {
     max-width: 380px;
     margin: auto; }
 
-#carousel .carousel-item__long {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 20% 30px 20%; }
-  #carousel .carousel-item__long img {
-    flex: 1;
-    max-height: 430px; }
-  #carousel .carousel-item__long p {
-    margin-left: 20px;
-    flex: 3; }
+@media (min-width: 1024px) {
+  #carousel .carousel-item__long {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20% 30px 20%; }
+    #carousel .carousel-item__long img {
+      flex: 1;
+      max-height: 430px; }
+    #carousel .carousel-item__long p {
+      margin-left: 20px;
+      flex: 3; } }
+
+@media (max-width: 1023px) {
+  #carousel .carousel-item__long {
+    text-align: center;
+    min-height: 450px; }
+    #carousel .carousel-item__long > p {
+      margin: 30px 20% 50px 20%; }
+    #carousel .carousel-item__long > img {
+      max-width: 380px;
+      margin: auto; } }
 
 .subpage {
   width: 100%;
@@ -6171,8 +6182,16 @@ body {
 .rsvp-form label {
   margin-right: 20px; }
 
+.rsvp-form > fieldset {
+  margin-top: 30px; }
+
 .rsvp-form button {
   margin-top: 15px; }
+
+.rsvp-form .radio-group {
+  float: left; }
+  .rsvp-form .radio-group label {
+    margin-left: 10px; }
 
 .rsvp-form__text {
   display: flex; }
@@ -6188,6 +6207,11 @@ body {
   background-size: cover;
   background-position: center;
   color: white; }
+  @media (max-width: 767px) {
+    #rsvp .rsvp-form__text {
+      display: initial; }
+    #rsvp .radio-group {
+      width: 100%; } }
 
 #venue {
   background-color: #9e8169;
@@ -6207,3 +6231,6 @@ body {
         margin-right: 10px; }
       #venue .venue--dining {
         margin-left: 10px; } }
+  @media (max-width: 767px) {
+    #venue iframe {
+      display: none; } }

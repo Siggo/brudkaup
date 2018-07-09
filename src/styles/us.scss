@@ -14,22 +14,45 @@
             margin: auto;
         }
     }
+    @media (min-width: 1024px)
+        {
+            .carousel-item__long
+            {
+        
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 20% 30px 20%;
+                img 
+                {
+                    flex: 1;
+                    max-height: 430px;
+                }
+                p 
+                {
+                    margin-left: 20px;
+                    flex: 3;
+                }
+            }
+        }
+        @media (max-width: 1023px)
+        {
     .carousel-item__long
     {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 20% 30px 20%;
-        img 
-        {
-            flex: 1;
-            max-height: 430px;
+        
+            text-align: center;
+            min-height: 450px;
+            > p 
+            {
+                margin: 30px 20% 50px 20%;
+            }
+            > img 
+            {
+                max-width: 380px;
+                margin: auto;
+            }
         }
-        p 
-        {
-            margin-left: 20px;
-            flex: 3;
-        }
+        
     }
 
 }

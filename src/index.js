@@ -35,7 +35,6 @@ window.addEventListener('scroll', function (e) {
   if (window.scrollY > $('.banner').outerHeight())
   {
     let old = window.scrollY
-    console.log("hm")
     $('.header').addClass('scrolled').css({marginTop: 0});
       
     $('.container-wrapper').css({marginTop: ($('.header').outerHeight() + $('.banner').outerHeight())});
