@@ -6143,18 +6143,22 @@ body {
   background-color: #B6A589;
   color: white; }
 
-#rsvp-form p {
+.rsvp-form p {
   width: 100%;
   margin-bottom: 5px; }
 
-#rsvp-form label {
+.rsvp-form label {
   margin-right: 20px; }
 
-#rsvp-form textarea {
-  width: 350px; }
-
-#rsvp-form button {
+.rsvp-form button {
   margin-top: 15px; }
+
+.rsvp-form__text {
+  display: flex; }
+  .rsvp-form__text fieldset {
+    flex: 1; }
+  .rsvp-form__text textarea {
+    width: 90%; }
 
 #rsvp {
   background-color: #3d5571;
