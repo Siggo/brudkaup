@@ -8,7 +8,7 @@ import configureStore from './redux/store'
 
 import { Provider } from 'react-redux'
 
-import Main from './pages/main'
+import Us from './pages/us'
 import About from './pages/about'
 import Venue from './pages/venue'
 import RSVP from './pages/rsvp'
@@ -31,12 +31,19 @@ const scrollTo = (id) => {
   }, 500)
 }
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function (e) {
   if (window.scrollY > $('.banner').outerHeight())
   {
+    let old = window.scrollY
+    console.log("hm")
     $('.header').addClass('scrolled').css({marginTop: 0});
-      $('.container-wrapper').css({marginTop: ($('.header').outerHeight() + $('.banner').outerHeight())});
-    } 
+      
+    $('.container-wrapper').css({marginTop: ($('.header').outerHeight() + $('.banner').outerHeight())});
+    // Leiðinda kækur í scrollY að breytast hérna í akkúrat einni keyrslu af þessu sem triggerar óvart hitt einu sinni. Gerum þetta handvirkt í staðinn
+    window.scrollY = old + e.detail
+  } 
+    
+
   else {
       $('.header').removeClass('scrolled').css({marginTop: $('.banner').outerHeight()});;
       $('.container-wrapper').css({marginTop: 0});
@@ -88,13 +95,13 @@ render(
       </div>
       <div className='header'>
         <ul className='header--nav'>
-          <li><a href='#main' onClick={() => scrollTo('#main')}>AÐAL</a></li>
+          <li><a href='#us' onClick={() => scrollTo('#us')}>AÐAL</a></li>
           <li><a href='#rsvp' onClick={() => scrollTo('#rsvp')}>RSVP</a></li>
           <li><a href='#venue' onClick={() => scrollTo('#venue')}>STAÐSETNING</a></li>
         </ul>
       </div>
         <div className='container-wrapper'>
-          <Container id='main'  component={Main} />
+          <Container id='us'  component={Us} />
           <Container id='rsvp'  component={RSVP} />
           <Container id='venue' component={Venue} />
         </div>

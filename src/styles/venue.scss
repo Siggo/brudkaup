@@ -6,24 +6,27 @@ background-attachment: fixed;
 background-size: cover;
 background-position: center;
 color: white;
-    text-align: center;
-    .venue
-    {
-    	display: flex;
-    	&--church, &--dining
-	    {
-	        flex-basis: 0;
-	        flex-grow: 1;
+	text-align: center;
+	
+	@media (min-width: 1200px) {
+		.venue
+		{
+			display: flex;
+			&--church, &--dining
+			{
+				flex-basis: 0;
+				flex-grow: 1;
 
-	    }
-	    &--church
-	    {
-	        margin-right: 10px;
-	    }
-	    &--dining
-	    {
-	        margin-left: 10px;
-	    }
-    }
+			}
+			&--church
+			{
+				margin-right: 10px;
+			}
+			&--dining
+			{
+				margin-left: 10px;
+			}
+		}
+	}
     
 }

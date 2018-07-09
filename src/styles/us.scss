@@ -1,0 +1,35 @@
+#carousel
+{
+    .carousel-item
+    {
+        text-align: center;
+        min-height: 450px;
+        > p 
+        {
+            margin: 30px 20% 50px 20%;
+        }
+        > img 
+        {
+            max-width: 380px;
+            margin: auto;
+        }
+    }
+    .carousel-item__long
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 20% 30px 20%;
+        img 
+        {
+            flex: 1;
+            max-height: 430px;
+        }
+        p 
+        {
+            margin-left: 20px;
+            flex: 3;
+        }
+    }
+
+}
