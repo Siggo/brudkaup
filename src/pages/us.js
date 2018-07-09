@@ -12,7 +12,7 @@ class Us extends Component {
   render () {
     return (
       <div>
-        <div id="carousel" className="carousel slide" data-ride="carousel" data-interval="false">
+        <div id="carousel" className="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img className="d-block w-100" src={fyrst} alt="First slide"/>
