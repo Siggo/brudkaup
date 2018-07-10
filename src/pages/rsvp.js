@@ -20,7 +20,7 @@ class RSVP extends Component {
        data: {
          "entry.877086558": $(".rsvp-form input[type='radio'][name='rsvp']:checked").val(),
          "entry.1498135098": $('#names').val(),
-         "entry.2606285": $('#comment').val()
+         "entry.2606285": $('#spotify').val()
        },
        type: "POST",
        dataType: "xml",
@@ -46,11 +46,16 @@ class RSVP extends Component {
             
               <p>Það mikilvæga! Ef þú ert hérna inni getum við ekki ímyndað okkur gott brúðkaup án þín. Smelltu inn svari að neðan hvort þú komist og nöfnin á þeim sem að mæta.</p>
               <p>Við minnum góðlátlega á að það verður veisla fram á kvöld þannig að yngra fólkið (undir 16) þarf að vera heima.</p>
+              <p>Þegar að gítarstrengirnir verða allir slitnaðir mun DJ Spotify taka við. Ef þú situr á heitasta lagi sumarsins þá máttu endilega óska eftir því og við bætum því inn á playlistann!</p>
               <fieldset>
-              <input id="qs1_op_1" type="radio" value="Já, ég mæti!" name="rsvp" />
-              <label for="qs1_op_1">Já, ég mæti!</label>
-              <input id="qs1_op_2" type="radio" value="Því miður kemst ég ekki" name="rsvp" />
-              <label for="qs1_op_1">Kemst því miður ekki</label>
+              <div className='radio-group'>
+                <input id="qs1_op_1" type="radio" value="Já, ég mæti!" name="rsvp" />
+                <label for="qs1_op_1">Já, ég mæti!</label>
+              </div>
+              <div className='radio-group'>
+                <input id="qs1_op_2" type="radio" value="Því miður kemst ég ekki" name="rsvp" />
+                <label for="qs1_op_1">Kemst því miður ekki</label>
+              </div>
             </fieldset>
             <div className='rsvp-form__text'>
               <fieldset>
@@ -58,11 +63,11 @@ class RSVP extends Component {
                 <textarea id="names" name="names"></textarea>
               </fieldset>
               <fieldset>
-                <p>Athugasemdir eða spurningar</p>
-                <textarea id="comment" name="comment"></textarea>
+                <p>Óskalag</p>
+                <textarea id="spotify" name="spotify"></textarea>
               </fieldset>
             </div>
-              <button id="send" disabled={this.state.sending} type="submit">
+              <button id="send" className="btn btn-default" disabled={this.state.sending} type="submit">
                 Senda
               </button>
           </form>
