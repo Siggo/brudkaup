@@ -68,7 +68,7 @@ class RSVP extends Component {
           </form>
         }
         { this.state.registered && 
-          <p>Þú ert skráður! Ef þú óskar svo eftir að breyta skráningunni geturðu haft samband við brúðhjónin.</p>
+          <p>Þú ert skráður! Ef þú óskar eftir því að breyta skráningunni geturðu haft samband við brúðhjónin.</p>
         }
         
       </div>
