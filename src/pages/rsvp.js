@@ -49,7 +49,7 @@ class RSVP extends Component {
               <p>Þegar að gítarstrengirnir verða allir slitnaðir mun DJ Spotify taka við. Ef þú situr á heitasta lagi sumarsins þá máttu endilega óska eftir því og við bætum því inn á playlistann!</p>
               <fieldset>
               <div className='radio-group'>
-                <input id="qs1_op_1" type="radio" value="Já, ég mæti!" name="rsvp" />
+                <input id="qs1_op_1" type="radio" value="Já, ég mæti!" name="rsvp" checked="checked" />
                 <label for="qs1_op_1">Já, ég mæti!</label>
               </div>
               <div className='radio-group'>
