@@ -14,6 +14,7 @@ import Venue from './pages/venue'
 import RSVP from './pages/rsvp'
 
 import Container from './layouts/container'
+import Language from './layouts/language'
 
 import actions from './redux/actions/'
 
@@ -57,47 +58,24 @@ flipp(() => {
   store.dispatch(actions.misc.flipView())
 })
 
-/*
-render(
-  <Provider store={store}>
-    <HashRouter>
-      <div>
-        <div className='header'>
-          <ul className='header--nav'>
-            <li><NavLink exact to='/'>Main</NavLink></li>
-            <li><NavLink to='/stuff'>Stuff</NavLink></li>
-            <li><NavLink to='/about'>About</NavLink></li>
-          </ul>
-        </div>
-        <div className='banner'>
-          <img src={banner} alt='banner' />
-        </div>
-        <div className='container'>
-          <div className='row'>
-            <Route exact path='/' component={Main} />
-            <Route path='/stuff' component={Stuff} />
-            <Route path='/about' component={About} />
-          </div>
-        </div>
-      </div>
-    </HashRouter>
-  </Provider>,
-  document.getElementById('root')
-) */
 
 render(
+
   <Provider store={store}>
     <div>
       
       <div className='banner'>
         <div className='banner--image' />
       </div>
+      <Language/>
       <div className='header'>
         <ul className='header--nav'>
-          <li><a href='#us' onClick={() => scrollTo('#us')}>AÐAL</a></li>
-          <li><a href='#rsvp' onClick={() => scrollTo('#rsvp')}>RSVP</a></li>
-          <li><a href='#venue' onClick={() => scrollTo('#venue')}>STAÐSETNING</a></li>
+          <li><a href='#us' onClick={() => scrollTo('#us')}>{state.misc.lang === 'is' ? 'AÐAL' : 'MAIN'}</a></li>
+          <li><a href='#rsvp' onClick={() => scrollTo('#rsvp')}>{state.misc.lang === 'is' ? 'RSVP' : 'RSVP'}</a></li>
+          <li><a href='#venue' onClick={() => scrollTo('#venue')}>{state.misc.lang === 'is' ? 'STAÐSETNING' : 'VENUE'}</a></li>
+         
         </ul>
+        
       </div>
         <div className='container-wrapper'>
           <Container id='us'  component={Us} />

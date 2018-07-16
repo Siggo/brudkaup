@@ -6063,6 +6063,15 @@ a.text-dark:hover, a.text-dark:focus {
         .header--nav li a.active {
           background: #3f3515; }
 
+#language {
+  position: fixed;
+  top: 20px;
+  z-index: 1000;
+  right: 20px;
+  max-width: 30px;
+  min-height: 25px;
+  cursor: pointer; }
+
 .footer {
   position: absolute;
   left: 0;

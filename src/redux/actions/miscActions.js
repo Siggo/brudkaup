@@ -4,5 +4,11 @@ export const miscActions = {
     return {
       type: 'FLIP_VIEW'
     }
+  },
+  toggleLanguage: function(lang) {
+    return {
+      type: 'TOGGLE_LANGUAGE',
+      lang
+    }
   }
 }

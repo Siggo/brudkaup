@@ -1,5 +1,6 @@
 const initialMisc = {
-  flipped: false
+  flipped: false,
+  lang: 'is'
 }
 
 export default (misc = initialMisc, action) => {
@@ -8,6 +9,10 @@ export default (misc = initialMisc, action) => {
       return Object.assign({}, misc, {
         flipped: !misc.flipped
       })
+    case 'TOGGLE_LANGUAGE':
+      return Object.assign({}, misc, {
+        lang: action.lang
+      }) 
 
     default:
       return misc
