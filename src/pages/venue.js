@@ -43,7 +43,6 @@ class Venue extends Component {
         	 <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAjjwcFv515aL10blU4Y4XG9_x-4y2ZhYk&q=Mörkin,+Reykjavík" width="500" height="450" frameBorder="0" style={{border:0}} allowFullScreen></iframe>
         </div>
         </div>
-        
          </div>
     )
   }

@@ -54,6 +54,16 @@ class RSVP extends Component {
         {
           is: "Þú ert skráður! Ef þú óskar eftir því að breyta skráningunni geturðu haft samband við brúðhjónin.",
           en: "You're registered! If you need to change your registration please contact the bride or groom."
+        },
+        registry1:
+        {
+          is: "Brúðhjónin eru með gjafalista skráða í ",
+          en: "The happy couple are registered at "
+        },
+        registry2:
+        {
+          is: " og í búð Líf & list.",
+          en: " and on location in Líf & list, Smáralind."
         }
       }
     }
@@ -126,7 +136,7 @@ class RSVP extends Component {
         { this.state.registered && 
           <p>{text.sent[lang]}</p>
         }
-        
+        <p style={{marginTop: 40}}>{text.registry1[lang]}<a href="https://byggtogbuid.is/giftlist/view/?code=DD19EE43E4">Byggt & Búið</a>{text.registry2[lang]}</p>
       </div>
     )
   }
